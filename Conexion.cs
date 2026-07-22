@@ -14,7 +14,7 @@ internal class Conexion
 SqlConnection conex = new SqlConnection(); 
 // Datos de la conexión
 static string servidor = "localhost"; 
-static string bd = "Sistema";
+static string bd = "MedCenter2";
 static string usuario = "root2";
 static string pass = "root2";
 static string puerto = "1433";
