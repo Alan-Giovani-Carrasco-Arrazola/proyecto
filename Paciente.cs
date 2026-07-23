@@ -1,35 +1,24 @@
-using System.Data.SqlClient;
+using Integrador;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Contracts;
 using System.Windows.Forms;
-using Integrador;
-internal class Pacientes
+internal class Paciente
 {
-    public void visualizarPacientes()
+    public DataTable visualizarPacientes()
     {
         Conexion con = new Conexion();
+        DataTable tabla = new DataTable();
+
         using (SqlConnection conexion = con.estableceConexion())
         {
             conexion.Open();
             string query = "SELECT * FROM Paciente";
-            SqlCommand cmd = new SqlCommand(query, conexion);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                int id_Paciente = reader.GetInt16(0);
-                int expediente = reader.GetInt32(1);
-                string nombre = reader.GetString(2);
-                string apellidoP = reader.GetString(3);
-                string apellidoM = reader.GetString(4);
-                DateTime fechaNacimiento = reader.GetDateTime(5);
-                string genero = reader.GetString(6);
-                string estadoCivil = reader.GetString(7);
-                string curp = reader.GetString(8);
-                string tipoSangre = reader.GetString(9);
-                string domicilio = reader.GetString(10);
-                string telefonoCorreo = reader.GetString(11);
-            }
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conexion);
+            adapter.Fill(tabla); // Aquí se llena la tabla sola
         }
+        return tabla;
     }
     public static void registraPacientes(int expediente, string nombre, string apellidoP, string apellidoM, DateTime fechaNacimiento, string genero, string estadoCivil, string curp, string tipoSangre, string domicilio, string telefonoCorreo)
     {

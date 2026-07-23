@@ -9,9 +9,7 @@ internal class Usuario
         Conexion con = new Conexion();
         using (SqlConnection conexion = con.estableceConexion())
         {
-            conexion.Open();
-
-            string query = "SELECT COUNT(*) FROM Usuarios WHERE nombreUsuario = @user AND contrasena = @pass";
+            string query = "SELECT COUNT(*) FROM Usuario WHERE nombreUsuario = @user AND contraseña = @pass";
 
             SqlCommand cmd = new SqlCommand(query, conexion);
             cmd.Parameters.AddWithValue("@user", usuario);
