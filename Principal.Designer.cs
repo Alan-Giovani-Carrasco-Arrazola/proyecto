@@ -32,6 +32,7 @@
             panel2 = new Panel();
             btnPacientes = new Button();
             panelContenedor = new Panel();
+            button1 = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(btnPacientes);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 50);
@@ -70,6 +72,15 @@
             panelContenedor.Size = new Size(767, 471);
             panelContenedor.TabIndex = 2;
             // 
+            // button1
+            // 
+            button1.Location = new Point(30, 88);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "Recepción";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -90,5 +101,6 @@
         private Panel panel2;
         private Panel panelContenedor;
         private Button btnPacientes;
+        private Button button1;
     }
 }

@@ -29,19 +29,22 @@ internal class Paciente
 
             string query = "INSERT INTO Paciente (numero_expediente, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, genero, estado_civil, CURP, tipo_sangre, domicilio, telefonocorreo) VALUES (@expediente, @nombreP, @apellidoP, @apellidoM, @fechaNacimiento, @genero, @estadoCivil, @curp, @tipoSangre, @domicilio, @telefonoCorreo)";
 
-            SqlCommand cmd = new SqlCommand(query, conexion);
-            cmd.Parameters.AddWithValue("@expediente", expediente);
-            cmd.Parameters.AddWithValue("@nombreP", nombre);
-            cmd.Parameters.AddWithValue("@apellidoP", apellidoP);
-            cmd.Parameters.AddWithValue("@apellidoM", apellidoM);
-            cmd.Parameters.AddWithValue("@fechaNacimiento", fechaNacimiento);
-            cmd.Parameters.AddWithValue("@genero", genero);
-            cmd.Parameters.AddWithValue("@estadoCivil", estadoCivil);
-            cmd.Parameters.AddWithValue("@curp", curp);
-            cmd.Parameters.AddWithValue("@tipoSangre", tipoSangre);
-            cmd.Parameters.AddWithValue("@domicilio", domicilio);
-            cmd.Parameters.AddWithValue("@telefonoCorreo", telefonoCorreo);
+            using (SqlCommand cmd = new SqlCommand(query, conexion))
+            {
+                cmd.Parameters.AddWithValue("@expediente", expediente);
+                cmd.Parameters.AddWithValue("@nombreP", nombre);
+                cmd.Parameters.AddWithValue("@apellidoP", apellidoP);
+                cmd.Parameters.AddWithValue("@apellidoM", apellidoM);
+                cmd.Parameters.AddWithValue("@fechaNacimiento", fechaNacimiento);
+                cmd.Parameters.AddWithValue("@genero", genero);
+                cmd.Parameters.AddWithValue("@estadoCivil", estadoCivil);
+                cmd.Parameters.AddWithValue("@curp", curp);
+                cmd.Parameters.AddWithValue("@tipoSangre", tipoSangre);
+                cmd.Parameters.AddWithValue("@domicilio", domicilio);
+                cmd.Parameters.AddWithValue("@telefonoCorreo", telefonoCorreo);
 
+                cmd.ExecuteNonQuery(); // <-- ESTO TE FALTABA
+            }
         }
     }
 }

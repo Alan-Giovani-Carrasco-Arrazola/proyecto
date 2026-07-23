@@ -29,23 +29,34 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            btnNuevoPaciente = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(172, 79);
+            dataGridView1.Location = new Point(104, 117);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(426, 270);
+            dataGridView1.Size = new Size(612, 270);
             dataGridView1.TabIndex = 0;
+            // 
+            // btnNuevoPaciente
+            // 
+            btnNuevoPaciente.Location = new Point(622, 36);
+            btnNuevoPaciente.Name = "btnNuevoPaciente";
+            btnNuevoPaciente.Size = new Size(94, 29);
+            btnNuevoPaciente.TabIndex = 1;
+            btnNuevoPaciente.Text = "Nuevo Paciente";
+            btnNuevoPaciente.UseVisualStyleBackColor = true;
             // 
             // Pacientes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnNuevoPaciente);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Pacientes";
@@ -57,5 +68,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button btnNuevoPaciente;
     }
 }
