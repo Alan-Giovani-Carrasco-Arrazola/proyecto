@@ -32,7 +32,11 @@
             panel2 = new Panel();
             btnPacientes = new Button();
             panelContenedor = new Panel();
-            button1 = new Button();
+            btnRecepcion = new Button();
+            btnDashboard = new Button();
+            btnAgenda = new Button();
+            btnHistoria = new Button();
+            btnFactura = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,7 +50,11 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnFactura);
+            panel2.Controls.Add(btnHistoria);
+            panel2.Controls.Add(btnAgenda);
+            panel2.Controls.Add(btnDashboard);
+            panel2.Controls.Add(btnRecepcion);
             panel2.Controls.Add(btnPacientes);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 50);
@@ -56,7 +64,7 @@
             // 
             // btnPacientes
             // 
-            btnPacientes.Location = new Point(30, 123);
+            btnPacientes.Location = new Point(36, 185);
             btnPacientes.Name = "btnPacientes";
             btnPacientes.Size = new Size(94, 29);
             btnPacientes.TabIndex = 0;
@@ -72,14 +80,51 @@
             panelContenedor.Size = new Size(767, 471);
             panelContenedor.TabIndex = 2;
             // 
-            // button1
+            // btnRecepcion
             // 
-            button1.Location = new Point(30, 88);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Recepción";
-            button1.UseVisualStyleBackColor = true;
+            btnRecepcion.Location = new Point(36, 150);
+            btnRecepcion.Name = "btnRecepcion";
+            btnRecepcion.Size = new Size(94, 29);
+            btnRecepcion.TabIndex = 1;
+            btnRecepcion.Text = "Recepción";
+            btnRecepcion.UseVisualStyleBackColor = true;
+            btnRecepcion.Click += btnRecepcion_Click;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.Location = new Point(42, 119);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(94, 29);
+            btnDashboard.TabIndex = 2;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // btnAgenda
+            // 
+            btnAgenda.Location = new Point(25, 220);
+            btnAgenda.Name = "btnAgenda";
+            btnAgenda.Size = new Size(144, 29);
+            btnAgenda.TabIndex = 3;
+            btnAgenda.Text = "Agenda y Cita";
+            btnAgenda.UseVisualStyleBackColor = true;
+            // 
+            // btnHistoria
+            // 
+            btnHistoria.Location = new Point(25, 255);
+            btnHistoria.Name = "btnHistoria";
+            btnHistoria.Size = new Size(138, 29);
+            btnHistoria.TabIndex = 4;
+            btnHistoria.Text = "Historial Clínico";
+            btnHistoria.UseVisualStyleBackColor = true;
+            // 
+            // btnFactura
+            // 
+            btnFactura.Location = new Point(42, 290);
+            btnFactura.Name = "btnFactura";
+            btnFactura.Size = new Size(94, 29);
+            btnFactura.TabIndex = 5;
+            btnFactura.Text = "Factura";
+            btnFactura.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
@@ -101,6 +146,10 @@
         private Panel panel2;
         private Panel panelContenedor;
         private Button btnPacientes;
-        private Button button1;
+        private Button btnRecepcion;
+        private Button btnAgenda;
+        private Button btnDashboard;
+        private Button btnFactura;
+        private Button btnHistoria;
     }
 }

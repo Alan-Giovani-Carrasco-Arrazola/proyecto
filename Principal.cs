@@ -20,6 +20,10 @@ namespace Integrador
         {
             AbrirFormEnPanel(new Pacientes());
         }
+        private void btnRecepcion_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Recepción());
+        }
         private void AbrirFormEnPanel(Form formHijo)
         {
             if (formularioActivo != null)
@@ -37,5 +41,7 @@ namespace Integrador
             formHijo.BringToFront();
             formHijo.Show();
         }
+
+        
     }
 }

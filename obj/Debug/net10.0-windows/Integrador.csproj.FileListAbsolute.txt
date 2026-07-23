@@ -25,3 +25,6 @@ C:\Users\Alan\Desktop\Integrador\bin\Debug\net10.0-windows\runtimes\unix\lib\net
 C:\Users\Alan\Desktop\Integrador\bin\Debug\net10.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Alan\Desktop\Integrador\obj\Debug\net10.0-windows\Integrador.Pacientes.resources
 C:\Users\Alan\Desktop\Integrador\obj\Debug\net10.0-windows\Integrador.Principal.resources
+C:\Users\Alan\Desktop\Integrador\obj\Debug\net10.0-windows\Integrador.AgregarPaciente.resources
+C:\Users\Alan\Desktop\Integrador\obj\Debug\net10.0-windows\Integrador.FormularioHoraLlegada.resources
+C:\Users\Alan\Desktop\Integrador\obj\Debug\net10.0-windows\Integrador.Recepción.resources

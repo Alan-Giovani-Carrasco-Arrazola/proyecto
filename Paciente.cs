@@ -6,19 +6,20 @@ using System.Diagnostics.Contracts;
 using System.Windows.Forms;
 internal class Paciente
 {
-    public DataTable visualizarPacientes()
+    public static DataTable visualizarPacientes()
     {
         Conexion con = new Conexion();
-        DataTable tabla = new DataTable();
-
-        using (SqlConnection conexion = con.estableceConexion())
+        using (var conexion = con.estableceConexion())
         {
             conexion.Open();
             string query = "SELECT * FROM Paciente";
-            SqlDataAdapter adapter = new SqlDataAdapter(query, conexion);
-            adapter.Fill(tabla); // Aquí se llena la tabla sola
+            using (var adapter = new System.Data.SqlClient.SqlDataAdapter(query, conexion))
+            {
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
         }
-        return tabla;
     }
     public static void registraPacientes(int expediente, string nombre, string apellidoP, string apellidoM, DateTime fechaNacimiento, string genero, string estadoCivil, string curp, string tipoSangre, string domicilio, string telefonoCorreo)
     {

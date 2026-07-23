@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using System;
 using System.Data;
 
-public class RegistroLlegada
+internal class RegistroLlegada
 {
     // 1. REGISTRAR - Ya corregido
     public static void registrarLlegada(int expediente, string nombrePaciente, DateTime hraLlegada, int tipoVisita, int usuario)
@@ -18,13 +18,13 @@ public class RegistroLlegada
             using (SqlCommand cmd = new SqlCommand(query, conexion))
             {
                 cmd.Parameters.AddWithValue("@expediente", expediente);
-                cmd.Parameters.AddWithValue("@nombrePaciente", nombrePaciente);
-                cmd.Parameters.AddWithValue("@horaLlegada", hraLlegada);
+                cmd.Parameters.AddWithValue("@nombrePaciente", nombrePaciente); 
                 cmd.Parameters.AddWithValue("@tipoVisita", tipoVisita);
                 cmd.Parameters.AddWithValue("@usuario", usuario);
 
                 cmd.ExecuteNonQuery();
             }
+
         }
     }
 

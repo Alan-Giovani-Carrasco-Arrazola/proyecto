@@ -16,5 +16,8 @@
     <Compile Update="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Recepción.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
