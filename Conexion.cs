@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data; // llamar
-using Microsoft.Data.SqlClient; // llamar
+using System.Data.SqlClient; // llamar
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
