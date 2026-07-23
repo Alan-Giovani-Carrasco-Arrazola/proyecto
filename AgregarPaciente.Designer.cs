@@ -158,7 +158,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(419, 191);
+            label12.Location = new Point(419, 229);
             label12.Name = "label12";
             label12.Size = new Size(124, 20);
             label12.TabIndex = 11;
@@ -216,7 +216,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(419, 224);
+            label13.Location = new Point(419, 192);
             label13.Name = "label13";
             label13.Size = new Size(124, 20);
             label13.TabIndex = 26;
@@ -225,6 +225,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Masculino", "Femenino" });
             comboBox1.Location = new Point(227, 217);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(125, 28);
@@ -241,6 +242,7 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "O+", "O-" });
             comboBox3.Location = new Point(564, 184);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(125, 28);
